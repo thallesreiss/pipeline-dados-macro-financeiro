@@ -1,15 +1,15 @@
-# Pipeline de Dados Quantitativos: Impacto MacroeconÙmico no Setor Banc·rio (ITUB4)
+Ôªø# Pipeline de Dados Quantitativos: Impacto Macroecon√¥mico no Setor Banc√°rio (ITUB4)
 
-Este projeto constrÛi um pipeline de dados ponta a ponta (End-to-End) para extrair, armazenar, modelar e analisar o impacto histÛrico da Taxa Selic sobre o preÁo de fechamento ajustado das aÁıes do Ita˙ Unibanco (ITUB4).
+Este projeto constr√≥i um pipeline de dados ponta a ponta (End-to-End) para extrair, armazenar, modelar e analisar o impacto hist√≥rico da Taxa Selic sobre as a√ß√µes do Ita√∫ Unibanco (ITUB4).
 
-## ??? Arquitetura e Tecnologias
+## üõ†Ô∏è Arquitetura e Tecnologias
 - **Linguagem:** Python 3.x
-- **Ingest„o de Dados:** APIs oficiais do Banco Central do Brasil (SGS) e Yahoo Finance (yfinance)
-- **Armazenamento:** Banco de Dados Relacional Local (SQLite)
-- **TransformaÁ„o de Dados:** SQL AvanÁado (PrÛximo Passo)
+- **Ingest√£o:** APIs do Banco Central (SGS) e Yahoo Finance
+- **Armazenamento:** SQLite
+- **Transforma√ß√£o:** SQL Avan√ßado (Pr√≥ximo Passo)
 
-## ?? Status do Progresso
-- [x] **Passo 1:** Ingest„o automatizada de dados brutos e carga na camada de Staging do SQLite.
-- [ ] **Passo 2:** Modelagem de Dados com SQL (Alinhamento temporal e c·lculo de lags).
-- [ ] **Passo 3:** An·lise EstatÌstica e VisualizaÁ„o de Dados (Python).
-- [ ] **Passo 4:** RelatÛrio de Insights EconÙmicos e DocumentaÁ„o Final.
+## üìà Status do Progresso
+- [x] **Passo 1:** Ingest√£o automatizada de dados brutos e staging no SQLite.
+- [ ] **Passo 2:** Modelagem de Dados com SQL.
+- [ ] **Passo 3:** An√°lise Estat√≠stica e Visualiza√ß√£o (Python).
+- [ ] **Passo 4:** Relat√≥rio de Insights e Documenta√ß√£o Final.
