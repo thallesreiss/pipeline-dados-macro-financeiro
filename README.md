@@ -2,22 +2,32 @@
 
 Este projeto constrói um pipeline de dados ponta a ponta (End-to-End) para extrair, armazenar, modelar e analisar o impacto histórico da Taxa Selic sobre o preço de fechamento ajustado das ações do Itaú Unibanco (ITUB4).
 
-O objetivo principal é identificar distorções de mercado e calcular as correlações defasadas entre as decisões de política monetária do Banco Central do Brasil e o desempenho do maior banco da América Latina.
-
 ## 🛠️ Arquitetura e Tecnologias
 - **Linguagem:** Python 3.x
 - **Ingestão de Dados:** APIs oficiais do Banco Central do Brasil (SGS) e Yahoo Finance (`yfinance`)
 - **Armazenamento:** Banco de Dados Relacional Local (SQLite)
-- **Transformação de Dados:** SQL Avançado
+- **Transformação de Dados:** SQL Avançado (CTEs e Window Functions)
+- **Análise & Gráficos:** Pandas, Seaborn e Matplotlib
 
 ## 📈 Status do Progresso
 - [x] **Passo 1:** Ingestão automatizada de dados brutos e carga na camada de Staging do SQLite.
 - [x] **Passo 2:** Modelagem de Dados com SQL (Alinhamento temporal e cálculo de lags).
-- [ ] **Passo 3:** Análise Estatística e Visualização de Dados (Python).
+- [x] **Passo 3:** Análise Estatística e Visualização de Dados (Python).
 - [ ] **Passo 4:** Relatório de Insights Econômicos e Documentação Final.
 
-## 🚀 Como Executar
+## 📊 Visualizações Geradas
 
-**1. Instale as dependências:**
+### Histórico de Ativos vs Macroeconomia
+![Preço vs Juros](images/itub4_vs_selic.png)
+
+### Matriz de Correlação Linear
+![Matriz de Correlação](images/matriz_correlacao.png)
+
+## 🚀 Como Executar
 ```bash
-pip install pandas yfinance requests
+# 1. Ingestão
+python scripts/ingestao_dados.py
+# 2. Modelagem SQL
+python scripts/modelagem_dados.py
+# 3. Análise e Gráficos
+python scripts/analise_graficos.py
