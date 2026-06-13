@@ -31,3 +31,10 @@ python scripts/ingestao_dados.py
 python scripts/modelagem_dados.py
 # 3. Análise e Gráficos
 python scripts/analise_graficos.py
+
+## 🧠 Conclusões e Insights de Mercado
+
+A análise quantitativa do pipeline gerou os seguintes insights sobre a relação entre o Itaú Unibanco (ITUB4) e a Taxa Selic:
+
+1. **Resiliência do Spread Bancário:** Diferente de setores intensivos em capital e altamente alavancados (como Varejo e Construção Civil), o Itaú exibe resiliência em ciclos de juros altos. O retorno médio de 20 dias úteis manteve-se saudável mesmo em janelas de política monetária restritiva, capturando o ganho de spread e receitas de tesouraria.
+2. **Eficiência de Arquitetura (SQL vs Python):** O alinhamento de granularidades temporais distintas (Ações = Diário, Selic = Mensal) foi resolvido inteiramente na camada de banco de dados (SQLite) através de junções por chaves de período (`ano_mes`). O cálculo de retorno móvel via Window Function (`LAG`) reduziu o custo de processamento em memória no Python, seguindo as melhores práticas de Analytics Engineering.
